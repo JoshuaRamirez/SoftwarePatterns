@@ -1,0 +1,105 @@
+{
+  "chat_gpt_prompt": "You have been given a JSON file that contains a catalog of software patterns contributed by different contributors. The file structure follows the following format:\n\n{\n  \"contributors\": [\n    {\n      \"name\": \"Contributor Name\",\n      \"email\": \"contributor@example.com\",\n      \"catalog\": {\n        \"name\": \"Catalog Name\",\n        \"created_date\": \"YYYY-MM-DD\",\n        \"description\": \"Catalog Description\",\n        \"patterns\": [\n          {\n            \"name\": \"Pattern Name\",\n            \"description\": \"Pattern Description\",\n            \"category\": \"Pattern Category\",\n            \"implementation\": {\n              \"steps\": [],\n              \"tips\": [],\n              \"method_signatures\": {},\n              \"types\": []\n            }\n          }\n        ]\n      }\n    }\n  ]\n}\n\nYour task is to read this JSON file and implement one of the software patterns described within it using your language of choice. \n\nTo read the JSON file, you can use any standard JSON parsing library in your language. Once you have read the file, you can access the software pattern information by navigating the JSON object.\n\nWhen implementing the software pattern, make sure to adhere to the implementation details provided in the JSON file. You can use the implementation details to guide your implementation in your language of choice.",
+  "contributors": [
+    {
+      "name": "Joshua Ramirez",
+      "email": "joshua.ramirez@me.com",
+      "catalog": {
+        "name": "Joshua's Software Pattern Catalog",
+        "created_date": "2023-03-30",
+        "description": "A catalog of software patterns",
+        "patterns": [
+          {
+            "name": "AppBus",
+            "description": "An in-proc pub/sub mechanism for a broker-style control flow protocol.",
+            "category": "Messaging",
+            "implementation": {
+              "steps": [
+                "Create a bus object",
+                "Subscribe to topics of interest",
+                "Publish messages to the bus"
+              ],
+              "tips": [
+                "Use a naming convention to standardize topic names",
+                "Ensure that all subscribers implement the same interface"
+              ],
+              "method_signatures": {
+                "constructor": {
+                  "return_type": "AppBus",
+                  "parameters": []
+                },
+                "subscribe": {
+                  "return_type": "void",
+                  "parameters": [
+                    {
+                      "name": "topic",
+                      "type": "string"
+                    },
+                    {
+                      "name": "subscriber",
+                      "type": {
+                        "name": "function",
+                        "parameters": [
+                          {
+                            "name": "event",
+                            "type": "Event"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "description": "Accepts a delegate to be invoked when an event with a specific topic is published."
+                },
+                "unsubscribe": {
+                  "return_type": "void",
+                  "parameters": [
+                    {
+                      "name": "topic",
+                      "type": "string"
+                    },
+                    {
+                      "name": "subscriber",
+                      "type": {
+                        "name": "function",
+                        "parameters": [
+                          {
+                            "name": "event",
+                            "type": "Event"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "description": "Removes a subscriber from the list of subscribers for the given topic."
+                },
+                "publish": {
+                  "return_type": "void",
+                  "parameters": [
+                    {
+                      "name": "message",
+                      "type": "Event"
+                    }
+                  ],
+                  "description": "Publishes an event object which has a topic property."
+                }
+              },
+              "types": [
+                {
+                  "name": "Event",
+                  "description": "The base interface for all events",
+                  "properties": [
+                    {
+                      "name": "topic",
+                      "type": "string",
+                      "description": "The topic of the event"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
