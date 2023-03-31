@@ -23,7 +23,7 @@
                 "Use a naming convention to standardize topic names",
                 "Ensure that all subscribers implement the same interface"
               ],
-              "uml": "class AppBus {\n  - steps: string[]\n  - tips: string[]\n  + constructor()\n  + subscribe(topic: string, subscriber: function(event: Event)): void\n  + unsubscribe(topic: string, subscriber: function(event: Event)): void\n  + publish(message: Event): void\n}\n\ninterface Event {\n  + topic: string\n}"
+              "uml": "class AppBus {  + constructor()\n  + subscribe(topic: string, subscriber: function(event: Event)): void\n  + unsubscribe(topic: string, subscriber: function(event: Event)): void\n  + publish(message: Event): void\n}\n\ninterface Event {\n  + topic: string\n}"
             }
           }
         ]
