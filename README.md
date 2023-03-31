@@ -7,8 +7,9 @@ This repository contains a catalog of software patterns that can be used as refe
 We welcome contributions to this repository from the community. If you have a software pattern that you would like to contribute, please follow the guidelines below:
 
 1. Fork this repository and create a new branch for your contribution.
-2. Add your pattern to the `patterns` array in the `patterns.json` file.
-3. Create a pull request to merge your branch into the `main` branch of this repository.
+2. If you have not yet contributed to this repository, add your name, email address, and the date of your contribution to the `contributors` array.
+3. Add your pattern to your `patterns` array.
+3. Create a pull request to merge your branch into the `master` branch of this repository.
 4. Your contribution will be reviewed by the repository maintainers and merged if it meets the criteria for inclusion in the catalog.
 
 Please ensure that your contribution adheres to the [code of conduct](CODE_OF_CONDUCT.md) for this repository.
