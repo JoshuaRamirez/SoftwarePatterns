@@ -1,0 +1,11 @@
+You have been given a JSON file that contains a catalog of software patterns contributed by different contributors.
+
+Your task is to read this JSON file and implement one of the software patterns described within it using your language of choice.
+
+To read the JSON file, you can use any standard JSON parsing library in your language. Once you have read the file, you can access the software pattern information by navigating the JSON object.
+
+When implementing the software pattern, make sure to adhere to the implementation details provided in the JSON file. You can use the implementation details to guide your implementation in your language of choice.
+
+Once you have implemented the software pattern, you can test it according to your language's testing framework. Feel free to share your implementation and testing code with others in the community for feedback and improvement.
+
+Good luck!
